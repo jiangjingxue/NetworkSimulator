@@ -1,0 +1,45 @@
+syntax="proto3";
+
+package E477A1;
+
+message RPCheader{
+  uint32 magic_num = 777;
+  uint32 msg_id = 222;
+  uint32 version = 1;
+}
+
+message PutRequest{
+    int32 key = 1;
+    bytes value = 2;
+    uint32 len = 3;
+}
+
+message GetRequest{
+    int32 key = 1;
+}
+
+message PutResponse{
+    bool flag = 1;
+}
+
+message GetResponse{
+    bool flag = 1;
+    bytes value = 2;
+    uint32 len = 3;
+}
+
+message PutGetRequest{
+    RPCheader rpc_header = 1;
+    oneof request_variants {
+        PutRequest put_req = 2;
+        GetRequest get_req = 3;
+    }
+}
+
+message PutGetResponse{
+    RPCheader rpc_header = 1;
+    oneof response_variants {
+        PutResponse put_res = 2;
+        GetResponse get_res = 3;
+    }
+}
