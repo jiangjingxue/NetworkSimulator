@@ -1,45 +1,51 @@
-syntax="proto3";
+syntax = "proto3";
 
-package E477A1;
+package RPC;
 
-message RPCheader{
-  uint32 magic_num = 777;
-  uint32 msg_id = 222;
-  uint32 version = 1;
+// Define the message types for the RPC protocol
+
+// Header information shared by all messages
+message RpcHeader {
+  uint32 magic_number = 1;
+  uint32 version = 2;
+  uint64 message_id = 3;
 }
 
-message PutRequest{
-    int32 key = 1;
-    bytes value = 2;
-    uint32 len = 3;
+// Request message for kvPut
+message KvPutRequest {
+  RpcHeader header = 1;
+  int32 key = 2;
+  bytes value = 3;
+  uint32 vlen = 4;
 }
 
-message GetRequest{
-    int32 key = 1;
+// Response message for kvPut
+message KvPutResponse {
+  RpcHeader header = 1;
+  bool status = 2; // Status code indicating success or failure
 }
 
-message PutResponse{
-    bool flag = 1;
+// Request message for kvGet
+message KvGetRequest {
+  RpcHeader header = 1;
+  int32 key = 2;
 }
 
-message GetResponse{
-    bool flag = 1;
-    bytes value = 2;
-    uint32 len = 3;
+// Response message for kvGet
+message KvGetResponse {
+  RpcHeader header = 1;
+  bool status = 2; // Status code indicating success or failure
+  bytes value = 3;
+  uint32 vlen = 4;
 }
 
-message PutGetRequest{
-    RPCheader rpc_header = 1;
-    oneof request_variants {
-        PutRequest put_req = 2;
-        GetRequest get_req = 3;
-    }
+// Define a union message to hold all possible RPC messages
+message RpcMessage {
+  oneof message_type {
+    KvPutRequest kv_put_request = 1;
+    KvPutResponse kv_put_response = 2;
+    KvGetRequest kv_get_request = 3;
+    KvGetResponse kv_get_response = 4;
+  }
 }
 
-message PutGetResponse{
-    RPCheader rpc_header = 1;
-    oneof response_variants {
-        PutResponse put_res = 2;
-        GetResponse get_res = 3;
-    }
-}
