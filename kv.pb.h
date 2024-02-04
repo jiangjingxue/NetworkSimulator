@@ -38,69 +38,65 @@ namespace protobuf_kv_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[7];
+  static const ::google::protobuf::internal::ParseTable schema[6];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
 void AddDescriptors();
 }  // namespace protobuf_kv_2eproto
-namespace E477A1 {
-class GetRequest;
-class GetRequestDefaultTypeInternal;
-extern GetRequestDefaultTypeInternal _GetRequest_default_instance_;
-class GetResponse;
-class GetResponseDefaultTypeInternal;
-extern GetResponseDefaultTypeInternal _GetResponse_default_instance_;
-class PutGetRequest;
-class PutGetRequestDefaultTypeInternal;
-extern PutGetRequestDefaultTypeInternal _PutGetRequest_default_instance_;
-class PutGetResponse;
-class PutGetResponseDefaultTypeInternal;
-extern PutGetResponseDefaultTypeInternal _PutGetResponse_default_instance_;
-class PutRequest;
-class PutRequestDefaultTypeInternal;
-extern PutRequestDefaultTypeInternal _PutRequest_default_instance_;
-class PutResponse;
-class PutResponseDefaultTypeInternal;
-extern PutResponseDefaultTypeInternal _PutResponse_default_instance_;
-class RPCheader;
-class RPCheaderDefaultTypeInternal;
-extern RPCheaderDefaultTypeInternal _RPCheader_default_instance_;
-}  // namespace E477A1
+namespace RPC {
+class KvGetRequest;
+class KvGetRequestDefaultTypeInternal;
+extern KvGetRequestDefaultTypeInternal _KvGetRequest_default_instance_;
+class KvGetResponse;
+class KvGetResponseDefaultTypeInternal;
+extern KvGetResponseDefaultTypeInternal _KvGetResponse_default_instance_;
+class KvPutRequest;
+class KvPutRequestDefaultTypeInternal;
+extern KvPutRequestDefaultTypeInternal _KvPutRequest_default_instance_;
+class KvPutResponse;
+class KvPutResponseDefaultTypeInternal;
+extern KvPutResponseDefaultTypeInternal _KvPutResponse_default_instance_;
+class RpcHeader;
+class RpcHeaderDefaultTypeInternal;
+extern RpcHeaderDefaultTypeInternal _RpcHeader_default_instance_;
+class RpcMessage;
+class RpcMessageDefaultTypeInternal;
+extern RpcMessageDefaultTypeInternal _RpcMessage_default_instance_;
+}  // namespace RPC
 namespace google {
 namespace protobuf {
-template<> ::E477A1::GetRequest* Arena::CreateMaybeMessage<::E477A1::GetRequest>(Arena*);
-template<> ::E477A1::GetResponse* Arena::CreateMaybeMessage<::E477A1::GetResponse>(Arena*);
-template<> ::E477A1::PutGetRequest* Arena::CreateMaybeMessage<::E477A1::PutGetRequest>(Arena*);
-template<> ::E477A1::PutGetResponse* Arena::CreateMaybeMessage<::E477A1::PutGetResponse>(Arena*);
-template<> ::E477A1::PutRequest* Arena::CreateMaybeMessage<::E477A1::PutRequest>(Arena*);
-template<> ::E477A1::PutResponse* Arena::CreateMaybeMessage<::E477A1::PutResponse>(Arena*);
-template<> ::E477A1::RPCheader* Arena::CreateMaybeMessage<::E477A1::RPCheader>(Arena*);
+template<> ::RPC::KvGetRequest* Arena::CreateMaybeMessage<::RPC::KvGetRequest>(Arena*);
+template<> ::RPC::KvGetResponse* Arena::CreateMaybeMessage<::RPC::KvGetResponse>(Arena*);
+template<> ::RPC::KvPutRequest* Arena::CreateMaybeMessage<::RPC::KvPutRequest>(Arena*);
+template<> ::RPC::KvPutResponse* Arena::CreateMaybeMessage<::RPC::KvPutResponse>(Arena*);
+template<> ::RPC::RpcHeader* Arena::CreateMaybeMessage<::RPC::RpcHeader>(Arena*);
+template<> ::RPC::RpcMessage* Arena::CreateMaybeMessage<::RPC::RpcMessage>(Arena*);
 }  // namespace protobuf
 }  // namespace google
-namespace E477A1 {
+namespace RPC {
 
 // ===================================================================
 
-class RPCheader : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:E477A1.RPCheader) */ {
+class RpcHeader : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:RPC.RpcHeader) */ {
  public:
-  RPCheader();
-  virtual ~RPCheader();
+  RpcHeader();
+  virtual ~RpcHeader();
 
-  RPCheader(const RPCheader& from);
+  RpcHeader(const RpcHeader& from);
 
-  inline RPCheader& operator=(const RPCheader& from) {
+  inline RpcHeader& operator=(const RpcHeader& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  RPCheader(RPCheader&& from) noexcept
-    : RPCheader() {
+  RpcHeader(RpcHeader&& from) noexcept
+    : RpcHeader() {
     *this = ::std::move(from);
   }
 
-  inline RPCheader& operator=(RPCheader&& from) noexcept {
+  inline RpcHeader& operator=(RpcHeader&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -110,34 +106,34 @@ class RPCheader : public ::google::protobuf::Message /* @@protoc_insertion_point
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const RPCheader& default_instance();
+  static const RpcHeader& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const RPCheader* internal_default_instance() {
-    return reinterpret_cast<const RPCheader*>(
-               &_RPCheader_default_instance_);
+  static inline const RpcHeader* internal_default_instance() {
+    return reinterpret_cast<const RpcHeader*>(
+               &_RpcHeader_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  void Swap(RPCheader* other);
-  friend void swap(RPCheader& a, RPCheader& b) {
+  void Swap(RpcHeader* other);
+  friend void swap(RpcHeader& a, RpcHeader& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline RPCheader* New() const final {
-    return CreateMaybeMessage<RPCheader>(NULL);
+  inline RpcHeader* New() const final {
+    return CreateMaybeMessage<RpcHeader>(NULL);
   }
 
-  RPCheader* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<RPCheader>(arena);
+  RpcHeader* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<RpcHeader>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const RPCheader& from);
-  void MergeFrom(const RPCheader& from);
+  void CopyFrom(const RpcHeader& from);
+  void MergeFrom(const RpcHeader& from);
   void Clear() final;
   bool IsInitialized() const final;
 
@@ -154,7 +150,7 @@ class RPCheader : public ::google::protobuf::Message /* @@protoc_insertion_point
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(RPCheader* other);
+  void InternalSwap(RpcHeader* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -170,54 +166,54 @@ class RPCheader : public ::google::protobuf::Message /* @@protoc_insertion_point
 
   // accessors -------------------------------------------------------
 
-  // uint32 magic_num = 777;
-  void clear_magic_num();
-  static const int kMagicNumFieldNumber = 777;
-  ::google::protobuf::uint32 magic_num() const;
-  void set_magic_num(::google::protobuf::uint32 value);
+  // uint32 magic_number = 1;
+  void clear_magic_number();
+  static const int kMagicNumberFieldNumber = 1;
+  ::google::protobuf::uint32 magic_number() const;
+  void set_magic_number(::google::protobuf::uint32 value);
 
-  // uint32 version = 1;
+  // uint32 version = 2;
   void clear_version();
-  static const int kVersionFieldNumber = 1;
+  static const int kVersionFieldNumber = 2;
   ::google::protobuf::uint32 version() const;
   void set_version(::google::protobuf::uint32 value);
 
-  // uint32 msg_id = 222;
-  void clear_msg_id();
-  static const int kMsgIdFieldNumber = 222;
-  ::google::protobuf::uint32 msg_id() const;
-  void set_msg_id(::google::protobuf::uint32 value);
+  // uint64 message_id = 3;
+  void clear_message_id();
+  static const int kMessageIdFieldNumber = 3;
+  ::google::protobuf::uint64 message_id() const;
+  void set_message_id(::google::protobuf::uint64 value);
 
-  // @@protoc_insertion_point(class_scope:E477A1.RPCheader)
+  // @@protoc_insertion_point(class_scope:RPC.RpcHeader)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 magic_num_;
+  ::google::protobuf::uint32 magic_number_;
   ::google::protobuf::uint32 version_;
-  ::google::protobuf::uint32 msg_id_;
+  ::google::protobuf::uint64 message_id_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_kv_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class PutRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:E477A1.PutRequest) */ {
+class KvPutRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:RPC.KvPutRequest) */ {
  public:
-  PutRequest();
-  virtual ~PutRequest();
+  KvPutRequest();
+  virtual ~KvPutRequest();
 
-  PutRequest(const PutRequest& from);
+  KvPutRequest(const KvPutRequest& from);
 
-  inline PutRequest& operator=(const PutRequest& from) {
+  inline KvPutRequest& operator=(const KvPutRequest& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  PutRequest(PutRequest&& from) noexcept
-    : PutRequest() {
+  KvPutRequest(KvPutRequest&& from) noexcept
+    : KvPutRequest() {
     *this = ::std::move(from);
   }
 
-  inline PutRequest& operator=(PutRequest&& from) noexcept {
+  inline KvPutRequest& operator=(KvPutRequest&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -227,34 +223,34 @@ class PutRequest : public ::google::protobuf::Message /* @@protoc_insertion_poin
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const PutRequest& default_instance();
+  static const KvPutRequest& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const PutRequest* internal_default_instance() {
-    return reinterpret_cast<const PutRequest*>(
-               &_PutRequest_default_instance_);
+  static inline const KvPutRequest* internal_default_instance() {
+    return reinterpret_cast<const KvPutRequest*>(
+               &_KvPutRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  void Swap(PutRequest* other);
-  friend void swap(PutRequest& a, PutRequest& b) {
+  void Swap(KvPutRequest* other);
+  friend void swap(KvPutRequest& a, KvPutRequest& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline PutRequest* New() const final {
-    return CreateMaybeMessage<PutRequest>(NULL);
+  inline KvPutRequest* New() const final {
+    return CreateMaybeMessage<KvPutRequest>(NULL);
   }
 
-  PutRequest* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<PutRequest>(arena);
+  KvPutRequest* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<KvPutRequest>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const PutRequest& from);
-  void MergeFrom(const PutRequest& from);
+  void CopyFrom(const KvPutRequest& from);
+  void MergeFrom(const KvPutRequest& from);
   void Clear() final;
   bool IsInitialized() const final;
 
@@ -271,7 +267,7 @@ class PutRequest : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PutRequest* other);
+  void InternalSwap(KvPutRequest* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -287,9 +283,9 @@ class PutRequest : public ::google::protobuf::Message /* @@protoc_insertion_poin
 
   // accessors -------------------------------------------------------
 
-  // bytes value = 2;
+  // bytes value = 3;
   void clear_value();
-  static const int kValueFieldNumber = 2;
+  static const int kValueFieldNumber = 3;
   const ::std::string& value() const;
   void set_value(const ::std::string& value);
   #if LANG_CXX11
@@ -301,48 +297,61 @@ class PutRequest : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::std::string* release_value();
   void set_allocated_value(::std::string* value);
 
-  // int32 key = 1;
+  // .RPC.RpcHeader header = 1;
+  bool has_header() const;
+  void clear_header();
+  static const int kHeaderFieldNumber = 1;
+  private:
+  const ::RPC::RpcHeader& _internal_header() const;
+  public:
+  const ::RPC::RpcHeader& header() const;
+  ::RPC::RpcHeader* release_header();
+  ::RPC::RpcHeader* mutable_header();
+  void set_allocated_header(::RPC::RpcHeader* header);
+
+  // int32 key = 2;
   void clear_key();
-  static const int kKeyFieldNumber = 1;
+  static const int kKeyFieldNumber = 2;
   ::google::protobuf::int32 key() const;
   void set_key(::google::protobuf::int32 value);
 
-  // uint32 len = 3;
-  void clear_len();
-  static const int kLenFieldNumber = 3;
-  ::google::protobuf::uint32 len() const;
-  void set_len(::google::protobuf::uint32 value);
+  // uint32 vlen = 4;
+  void clear_vlen();
+  static const int kVlenFieldNumber = 4;
+  ::google::protobuf::uint32 vlen() const;
+  void set_vlen(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:E477A1.PutRequest)
+  // @@protoc_insertion_point(class_scope:RPC.KvPutRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr value_;
+  ::RPC::RpcHeader* header_;
   ::google::protobuf::int32 key_;
-  ::google::protobuf::uint32 len_;
+  ::google::protobuf::uint32 vlen_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_kv_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class GetRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:E477A1.GetRequest) */ {
+class KvPutResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:RPC.KvPutResponse) */ {
  public:
-  GetRequest();
-  virtual ~GetRequest();
+  KvPutResponse();
+  virtual ~KvPutResponse();
 
-  GetRequest(const GetRequest& from);
+  KvPutResponse(const KvPutResponse& from);
 
-  inline GetRequest& operator=(const GetRequest& from) {
+  inline KvPutResponse& operator=(const KvPutResponse& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  GetRequest(GetRequest&& from) noexcept
-    : GetRequest() {
+  KvPutResponse(KvPutResponse&& from) noexcept
+    : KvPutResponse() {
     *this = ::std::move(from);
   }
 
-  inline GetRequest& operator=(GetRequest&& from) noexcept {
+  inline KvPutResponse& operator=(KvPutResponse&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -352,34 +361,34 @@ class GetRequest : public ::google::protobuf::Message /* @@protoc_insertion_poin
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const GetRequest& default_instance();
+  static const KvPutResponse& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const GetRequest* internal_default_instance() {
-    return reinterpret_cast<const GetRequest*>(
-               &_GetRequest_default_instance_);
+  static inline const KvPutResponse* internal_default_instance() {
+    return reinterpret_cast<const KvPutResponse*>(
+               &_KvPutResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  void Swap(GetRequest* other);
-  friend void swap(GetRequest& a, GetRequest& b) {
+  void Swap(KvPutResponse* other);
+  friend void swap(KvPutResponse& a, KvPutResponse& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline GetRequest* New() const final {
-    return CreateMaybeMessage<GetRequest>(NULL);
+  inline KvPutResponse* New() const final {
+    return CreateMaybeMessage<KvPutResponse>(NULL);
   }
 
-  GetRequest* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<GetRequest>(arena);
+  KvPutResponse* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<KvPutResponse>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const GetRequest& from);
-  void MergeFrom(const GetRequest& from);
+  void CopyFrom(const KvPutResponse& from);
+  void MergeFrom(const KvPutResponse& from);
   void Clear() final;
   bool IsInitialized() const final;
 
@@ -396,7 +405,7 @@ class GetRequest : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(GetRequest* other);
+  void InternalSwap(KvPutResponse* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -412,40 +421,169 @@ class GetRequest : public ::google::protobuf::Message /* @@protoc_insertion_poin
 
   // accessors -------------------------------------------------------
 
-  // int32 key = 1;
-  void clear_key();
-  static const int kKeyFieldNumber = 1;
-  ::google::protobuf::int32 key() const;
-  void set_key(::google::protobuf::int32 value);
+  // .RPC.RpcHeader header = 1;
+  bool has_header() const;
+  void clear_header();
+  static const int kHeaderFieldNumber = 1;
+  private:
+  const ::RPC::RpcHeader& _internal_header() const;
+  public:
+  const ::RPC::RpcHeader& header() const;
+  ::RPC::RpcHeader* release_header();
+  ::RPC::RpcHeader* mutable_header();
+  void set_allocated_header(::RPC::RpcHeader* header);
 
-  // @@protoc_insertion_point(class_scope:E477A1.GetRequest)
+  // bool status = 2;
+  void clear_status();
+  static const int kStatusFieldNumber = 2;
+  bool status() const;
+  void set_status(bool value);
+
+  // @@protoc_insertion_point(class_scope:RPC.KvPutResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::RPC::RpcHeader* header_;
+  bool status_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_kv_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class KvGetRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:RPC.KvGetRequest) */ {
+ public:
+  KvGetRequest();
+  virtual ~KvGetRequest();
+
+  KvGetRequest(const KvGetRequest& from);
+
+  inline KvGetRequest& operator=(const KvGetRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  KvGetRequest(KvGetRequest&& from) noexcept
+    : KvGetRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline KvGetRequest& operator=(KvGetRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const KvGetRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const KvGetRequest* internal_default_instance() {
+    return reinterpret_cast<const KvGetRequest*>(
+               &_KvGetRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  void Swap(KvGetRequest* other);
+  friend void swap(KvGetRequest& a, KvGetRequest& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline KvGetRequest* New() const final {
+    return CreateMaybeMessage<KvGetRequest>(NULL);
+  }
+
+  KvGetRequest* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<KvGetRequest>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const KvGetRequest& from);
+  void MergeFrom(const KvGetRequest& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(KvGetRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .RPC.RpcHeader header = 1;
+  bool has_header() const;
+  void clear_header();
+  static const int kHeaderFieldNumber = 1;
+  private:
+  const ::RPC::RpcHeader& _internal_header() const;
+  public:
+  const ::RPC::RpcHeader& header() const;
+  ::RPC::RpcHeader* release_header();
+  ::RPC::RpcHeader* mutable_header();
+  void set_allocated_header(::RPC::RpcHeader* header);
+
+  // int32 key = 2;
+  void clear_key();
+  static const int kKeyFieldNumber = 2;
+  ::google::protobuf::int32 key() const;
+  void set_key(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:RPC.KvGetRequest)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::RPC::RpcHeader* header_;
   ::google::protobuf::int32 key_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_kv_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class PutResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:E477A1.PutResponse) */ {
+class KvGetResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:RPC.KvGetResponse) */ {
  public:
-  PutResponse();
-  virtual ~PutResponse();
+  KvGetResponse();
+  virtual ~KvGetResponse();
 
-  PutResponse(const PutResponse& from);
+  KvGetResponse(const KvGetResponse& from);
 
-  inline PutResponse& operator=(const PutResponse& from) {
+  inline KvGetResponse& operator=(const KvGetResponse& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  PutResponse(PutResponse&& from) noexcept
-    : PutResponse() {
+  KvGetResponse(KvGetResponse&& from) noexcept
+    : KvGetResponse() {
     *this = ::std::move(from);
   }
 
-  inline PutResponse& operator=(PutResponse&& from) noexcept {
+  inline KvGetResponse& operator=(KvGetResponse&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -455,137 +593,34 @@ class PutResponse : public ::google::protobuf::Message /* @@protoc_insertion_poi
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const PutResponse& default_instance();
+  static const KvGetResponse& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const PutResponse* internal_default_instance() {
-    return reinterpret_cast<const PutResponse*>(
-               &_PutResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    3;
-
-  void Swap(PutResponse* other);
-  friend void swap(PutResponse& a, PutResponse& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline PutResponse* New() const final {
-    return CreateMaybeMessage<PutResponse>(NULL);
-  }
-
-  PutResponse* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<PutResponse>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const PutResponse& from);
-  void MergeFrom(const PutResponse& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(PutResponse* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // bool flag = 1;
-  void clear_flag();
-  static const int kFlagFieldNumber = 1;
-  bool flag() const;
-  void set_flag(bool value);
-
-  // @@protoc_insertion_point(class_scope:E477A1.PutResponse)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  bool flag_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  friend struct ::protobuf_kv_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
-class GetResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:E477A1.GetResponse) */ {
- public:
-  GetResponse();
-  virtual ~GetResponse();
-
-  GetResponse(const GetResponse& from);
-
-  inline GetResponse& operator=(const GetResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  GetResponse(GetResponse&& from) noexcept
-    : GetResponse() {
-    *this = ::std::move(from);
-  }
-
-  inline GetResponse& operator=(GetResponse&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const GetResponse& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const GetResponse* internal_default_instance() {
-    return reinterpret_cast<const GetResponse*>(
-               &_GetResponse_default_instance_);
+  static inline const KvGetResponse* internal_default_instance() {
+    return reinterpret_cast<const KvGetResponse*>(
+               &_KvGetResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     4;
 
-  void Swap(GetResponse* other);
-  friend void swap(GetResponse& a, GetResponse& b) {
+  void Swap(KvGetResponse* other);
+  friend void swap(KvGetResponse& a, KvGetResponse& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline GetResponse* New() const final {
-    return CreateMaybeMessage<GetResponse>(NULL);
+  inline KvGetResponse* New() const final {
+    return CreateMaybeMessage<KvGetResponse>(NULL);
   }
 
-  GetResponse* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<GetResponse>(arena);
+  KvGetResponse* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<KvGetResponse>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const GetResponse& from);
-  void MergeFrom(const GetResponse& from);
+  void CopyFrom(const KvGetResponse& from);
+  void MergeFrom(const KvGetResponse& from);
   void Clear() final;
   bool IsInitialized() const final;
 
@@ -602,7 +637,7 @@ class GetResponse : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(GetResponse* other);
+  void InternalSwap(KvGetResponse* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -618,9 +653,9 @@ class GetResponse : public ::google::protobuf::Message /* @@protoc_insertion_poi
 
   // accessors -------------------------------------------------------
 
-  // bytes value = 2;
+  // bytes value = 3;
   void clear_value();
-  static const int kValueFieldNumber = 2;
+  static const int kValueFieldNumber = 3;
   const ::std::string& value() const;
   void set_value(const ::std::string& value);
   #if LANG_CXX11
@@ -632,48 +667,61 @@ class GetResponse : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::std::string* release_value();
   void set_allocated_value(::std::string* value);
 
-  // bool flag = 1;
-  void clear_flag();
-  static const int kFlagFieldNumber = 1;
-  bool flag() const;
-  void set_flag(bool value);
+  // .RPC.RpcHeader header = 1;
+  bool has_header() const;
+  void clear_header();
+  static const int kHeaderFieldNumber = 1;
+  private:
+  const ::RPC::RpcHeader& _internal_header() const;
+  public:
+  const ::RPC::RpcHeader& header() const;
+  ::RPC::RpcHeader* release_header();
+  ::RPC::RpcHeader* mutable_header();
+  void set_allocated_header(::RPC::RpcHeader* header);
 
-  // uint32 len = 3;
-  void clear_len();
-  static const int kLenFieldNumber = 3;
-  ::google::protobuf::uint32 len() const;
-  void set_len(::google::protobuf::uint32 value);
+  // bool status = 2;
+  void clear_status();
+  static const int kStatusFieldNumber = 2;
+  bool status() const;
+  void set_status(bool value);
 
-  // @@protoc_insertion_point(class_scope:E477A1.GetResponse)
+  // uint32 vlen = 4;
+  void clear_vlen();
+  static const int kVlenFieldNumber = 4;
+  ::google::protobuf::uint32 vlen() const;
+  void set_vlen(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:RPC.KvGetResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr value_;
-  bool flag_;
-  ::google::protobuf::uint32 len_;
+  ::RPC::RpcHeader* header_;
+  bool status_;
+  ::google::protobuf::uint32 vlen_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_kv_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class PutGetRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:E477A1.PutGetRequest) */ {
+class RpcMessage : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:RPC.RpcMessage) */ {
  public:
-  PutGetRequest();
-  virtual ~PutGetRequest();
+  RpcMessage();
+  virtual ~RpcMessage();
 
-  PutGetRequest(const PutGetRequest& from);
+  RpcMessage(const RpcMessage& from);
 
-  inline PutGetRequest& operator=(const PutGetRequest& from) {
+  inline RpcMessage& operator=(const RpcMessage& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  PutGetRequest(PutGetRequest&& from) noexcept
-    : PutGetRequest() {
+  RpcMessage(RpcMessage&& from) noexcept
+    : RpcMessage() {
     *this = ::std::move(from);
   }
 
-  inline PutGetRequest& operator=(PutGetRequest&& from) noexcept {
+  inline RpcMessage& operator=(RpcMessage&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -683,40 +731,42 @@ class PutGetRequest : public ::google::protobuf::Message /* @@protoc_insertion_p
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const PutGetRequest& default_instance();
+  static const RpcMessage& default_instance();
 
-  enum RequestVariantsCase {
-    kPutReq = 2,
-    kGetReq = 3,
-    REQUEST_VARIANTS_NOT_SET = 0,
+  enum MessageTypeCase {
+    kKvPutRequest = 1,
+    kKvPutResponse = 2,
+    kKvGetRequest = 3,
+    kKvGetResponse = 4,
+    MESSAGE_TYPE_NOT_SET = 0,
   };
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const PutGetRequest* internal_default_instance() {
-    return reinterpret_cast<const PutGetRequest*>(
-               &_PutGetRequest_default_instance_);
+  static inline const RpcMessage* internal_default_instance() {
+    return reinterpret_cast<const RpcMessage*>(
+               &_RpcMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     5;
 
-  void Swap(PutGetRequest* other);
-  friend void swap(PutGetRequest& a, PutGetRequest& b) {
+  void Swap(RpcMessage* other);
+  friend void swap(RpcMessage& a, RpcMessage& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline PutGetRequest* New() const final {
-    return CreateMaybeMessage<PutGetRequest>(NULL);
+  inline RpcMessage* New() const final {
+    return CreateMaybeMessage<RpcMessage>(NULL);
   }
 
-  PutGetRequest* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<PutGetRequest>(arena);
+  RpcMessage* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<RpcMessage>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const PutGetRequest& from);
-  void MergeFrom(const PutGetRequest& from);
+  void CopyFrom(const RpcMessage& from);
+  void MergeFrom(const RpcMessage& from);
   void Clear() final;
   bool IsInitialized() const final;
 
@@ -733,7 +783,7 @@ class PutGetRequest : public ::google::protobuf::Message /* @@protoc_insertion_p
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PutGetRequest* other);
+  void InternalSwap(RpcMessage* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -749,212 +799,74 @@ class PutGetRequest : public ::google::protobuf::Message /* @@protoc_insertion_p
 
   // accessors -------------------------------------------------------
 
-  // .E477A1.RPCheader rpc_header = 1;
-  bool has_rpc_header() const;
-  void clear_rpc_header();
-  static const int kRpcHeaderFieldNumber = 1;
+  // .RPC.KvPutRequest kv_put_request = 1;
+  bool has_kv_put_request() const;
+  void clear_kv_put_request();
+  static const int kKvPutRequestFieldNumber = 1;
   private:
-  const ::E477A1::RPCheader& _internal_rpc_header() const;
+  const ::RPC::KvPutRequest& _internal_kv_put_request() const;
   public:
-  const ::E477A1::RPCheader& rpc_header() const;
-  ::E477A1::RPCheader* release_rpc_header();
-  ::E477A1::RPCheader* mutable_rpc_header();
-  void set_allocated_rpc_header(::E477A1::RPCheader* rpc_header);
+  const ::RPC::KvPutRequest& kv_put_request() const;
+  ::RPC::KvPutRequest* release_kv_put_request();
+  ::RPC::KvPutRequest* mutable_kv_put_request();
+  void set_allocated_kv_put_request(::RPC::KvPutRequest* kv_put_request);
 
-  // .E477A1.PutRequest put_req = 2;
-  bool has_put_req() const;
-  void clear_put_req();
-  static const int kPutReqFieldNumber = 2;
+  // .RPC.KvPutResponse kv_put_response = 2;
+  bool has_kv_put_response() const;
+  void clear_kv_put_response();
+  static const int kKvPutResponseFieldNumber = 2;
   private:
-  const ::E477A1::PutRequest& _internal_put_req() const;
+  const ::RPC::KvPutResponse& _internal_kv_put_response() const;
   public:
-  const ::E477A1::PutRequest& put_req() const;
-  ::E477A1::PutRequest* release_put_req();
-  ::E477A1::PutRequest* mutable_put_req();
-  void set_allocated_put_req(::E477A1::PutRequest* put_req);
+  const ::RPC::KvPutResponse& kv_put_response() const;
+  ::RPC::KvPutResponse* release_kv_put_response();
+  ::RPC::KvPutResponse* mutable_kv_put_response();
+  void set_allocated_kv_put_response(::RPC::KvPutResponse* kv_put_response);
 
-  // .E477A1.GetRequest get_req = 3;
-  bool has_get_req() const;
-  void clear_get_req();
-  static const int kGetReqFieldNumber = 3;
+  // .RPC.KvGetRequest kv_get_request = 3;
+  bool has_kv_get_request() const;
+  void clear_kv_get_request();
+  static const int kKvGetRequestFieldNumber = 3;
   private:
-  const ::E477A1::GetRequest& _internal_get_req() const;
+  const ::RPC::KvGetRequest& _internal_kv_get_request() const;
   public:
-  const ::E477A1::GetRequest& get_req() const;
-  ::E477A1::GetRequest* release_get_req();
-  ::E477A1::GetRequest* mutable_get_req();
-  void set_allocated_get_req(::E477A1::GetRequest* get_req);
+  const ::RPC::KvGetRequest& kv_get_request() const;
+  ::RPC::KvGetRequest* release_kv_get_request();
+  ::RPC::KvGetRequest* mutable_kv_get_request();
+  void set_allocated_kv_get_request(::RPC::KvGetRequest* kv_get_request);
 
-  void clear_request_variants();
-  RequestVariantsCase request_variants_case() const;
-  // @@protoc_insertion_point(class_scope:E477A1.PutGetRequest)
+  // .RPC.KvGetResponse kv_get_response = 4;
+  bool has_kv_get_response() const;
+  void clear_kv_get_response();
+  static const int kKvGetResponseFieldNumber = 4;
+  private:
+  const ::RPC::KvGetResponse& _internal_kv_get_response() const;
+  public:
+  const ::RPC::KvGetResponse& kv_get_response() const;
+  ::RPC::KvGetResponse* release_kv_get_response();
+  ::RPC::KvGetResponse* mutable_kv_get_response();
+  void set_allocated_kv_get_response(::RPC::KvGetResponse* kv_get_response);
+
+  void clear_message_type();
+  MessageTypeCase message_type_case() const;
+  // @@protoc_insertion_point(class_scope:RPC.RpcMessage)
  private:
-  void set_has_put_req();
-  void set_has_get_req();
+  void set_has_kv_put_request();
+  void set_has_kv_put_response();
+  void set_has_kv_get_request();
+  void set_has_kv_get_response();
 
-  inline bool has_request_variants() const;
-  inline void clear_has_request_variants();
+  inline bool has_message_type() const;
+  inline void clear_has_message_type();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::E477A1::RPCheader* rpc_header_;
-  union RequestVariantsUnion {
-    RequestVariantsUnion() {}
-    ::E477A1::PutRequest* put_req_;
-    ::E477A1::GetRequest* get_req_;
-  } request_variants_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  ::google::protobuf::uint32 _oneof_case_[1];
-
-  friend struct ::protobuf_kv_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
-class PutGetResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:E477A1.PutGetResponse) */ {
- public:
-  PutGetResponse();
-  virtual ~PutGetResponse();
-
-  PutGetResponse(const PutGetResponse& from);
-
-  inline PutGetResponse& operator=(const PutGetResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  PutGetResponse(PutGetResponse&& from) noexcept
-    : PutGetResponse() {
-    *this = ::std::move(from);
-  }
-
-  inline PutGetResponse& operator=(PutGetResponse&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const PutGetResponse& default_instance();
-
-  enum ResponseVariantsCase {
-    kPutRes = 2,
-    kGetRes = 3,
-    RESPONSE_VARIANTS_NOT_SET = 0,
-  };
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const PutGetResponse* internal_default_instance() {
-    return reinterpret_cast<const PutGetResponse*>(
-               &_PutGetResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    6;
-
-  void Swap(PutGetResponse* other);
-  friend void swap(PutGetResponse& a, PutGetResponse& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline PutGetResponse* New() const final {
-    return CreateMaybeMessage<PutGetResponse>(NULL);
-  }
-
-  PutGetResponse* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<PutGetResponse>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const PutGetResponse& from);
-  void MergeFrom(const PutGetResponse& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(PutGetResponse* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // .E477A1.RPCheader rpc_header = 1;
-  bool has_rpc_header() const;
-  void clear_rpc_header();
-  static const int kRpcHeaderFieldNumber = 1;
-  private:
-  const ::E477A1::RPCheader& _internal_rpc_header() const;
-  public:
-  const ::E477A1::RPCheader& rpc_header() const;
-  ::E477A1::RPCheader* release_rpc_header();
-  ::E477A1::RPCheader* mutable_rpc_header();
-  void set_allocated_rpc_header(::E477A1::RPCheader* rpc_header);
-
-  // .E477A1.PutResponse put_res = 2;
-  bool has_put_res() const;
-  void clear_put_res();
-  static const int kPutResFieldNumber = 2;
-  private:
-  const ::E477A1::PutResponse& _internal_put_res() const;
-  public:
-  const ::E477A1::PutResponse& put_res() const;
-  ::E477A1::PutResponse* release_put_res();
-  ::E477A1::PutResponse* mutable_put_res();
-  void set_allocated_put_res(::E477A1::PutResponse* put_res);
-
-  // .E477A1.GetResponse get_res = 3;
-  bool has_get_res() const;
-  void clear_get_res();
-  static const int kGetResFieldNumber = 3;
-  private:
-  const ::E477A1::GetResponse& _internal_get_res() const;
-  public:
-  const ::E477A1::GetResponse& get_res() const;
-  ::E477A1::GetResponse* release_get_res();
-  ::E477A1::GetResponse* mutable_get_res();
-  void set_allocated_get_res(::E477A1::GetResponse* get_res);
-
-  void clear_response_variants();
-  ResponseVariantsCase response_variants_case() const;
-  // @@protoc_insertion_point(class_scope:E477A1.PutGetResponse)
- private:
-  void set_has_put_res();
-  void set_has_get_res();
-
-  inline bool has_response_variants() const;
-  inline void clear_has_response_variants();
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::E477A1::RPCheader* rpc_header_;
-  union ResponseVariantsUnion {
-    ResponseVariantsUnion() {}
-    ::E477A1::PutResponse* put_res_;
-    ::E477A1::GetResponse* get_res_;
-  } response_variants_;
+  union MessageTypeUnion {
+    MessageTypeUnion() {}
+    ::RPC::KvPutRequest* kv_put_request_;
+    ::RPC::KvPutResponse* kv_put_response_;
+    ::RPC::KvGetRequest* kv_get_request_;
+    ::RPC::KvGetResponse* kv_get_response_;
+  } message_type_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::uint32 _oneof_case_[1];
 
@@ -969,565 +881,660 @@ class PutGetResponse : public ::google::protobuf::Message /* @@protoc_insertion_
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// RPCheader
+// RpcHeader
 
-// uint32 magic_num = 777;
-inline void RPCheader::clear_magic_num() {
-  magic_num_ = 0u;
+// uint32 magic_number = 1;
+inline void RpcHeader::clear_magic_number() {
+  magic_number_ = 0u;
 }
-inline ::google::protobuf::uint32 RPCheader::magic_num() const {
-  // @@protoc_insertion_point(field_get:E477A1.RPCheader.magic_num)
-  return magic_num_;
+inline ::google::protobuf::uint32 RpcHeader::magic_number() const {
+  // @@protoc_insertion_point(field_get:RPC.RpcHeader.magic_number)
+  return magic_number_;
 }
-inline void RPCheader::set_magic_num(::google::protobuf::uint32 value) {
+inline void RpcHeader::set_magic_number(::google::protobuf::uint32 value) {
   
-  magic_num_ = value;
-  // @@protoc_insertion_point(field_set:E477A1.RPCheader.magic_num)
+  magic_number_ = value;
+  // @@protoc_insertion_point(field_set:RPC.RpcHeader.magic_number)
 }
 
-// uint32 msg_id = 222;
-inline void RPCheader::clear_msg_id() {
-  msg_id_ = 0u;
-}
-inline ::google::protobuf::uint32 RPCheader::msg_id() const {
-  // @@protoc_insertion_point(field_get:E477A1.RPCheader.msg_id)
-  return msg_id_;
-}
-inline void RPCheader::set_msg_id(::google::protobuf::uint32 value) {
-  
-  msg_id_ = value;
-  // @@protoc_insertion_point(field_set:E477A1.RPCheader.msg_id)
-}
-
-// uint32 version = 1;
-inline void RPCheader::clear_version() {
+// uint32 version = 2;
+inline void RpcHeader::clear_version() {
   version_ = 0u;
 }
-inline ::google::protobuf::uint32 RPCheader::version() const {
-  // @@protoc_insertion_point(field_get:E477A1.RPCheader.version)
+inline ::google::protobuf::uint32 RpcHeader::version() const {
+  // @@protoc_insertion_point(field_get:RPC.RpcHeader.version)
   return version_;
 }
-inline void RPCheader::set_version(::google::protobuf::uint32 value) {
+inline void RpcHeader::set_version(::google::protobuf::uint32 value) {
   
   version_ = value;
-  // @@protoc_insertion_point(field_set:E477A1.RPCheader.version)
+  // @@protoc_insertion_point(field_set:RPC.RpcHeader.version)
+}
+
+// uint64 message_id = 3;
+inline void RpcHeader::clear_message_id() {
+  message_id_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 RpcHeader::message_id() const {
+  // @@protoc_insertion_point(field_get:RPC.RpcHeader.message_id)
+  return message_id_;
+}
+inline void RpcHeader::set_message_id(::google::protobuf::uint64 value) {
+  
+  message_id_ = value;
+  // @@protoc_insertion_point(field_set:RPC.RpcHeader.message_id)
 }
 
 // -------------------------------------------------------------------
 
-// PutRequest
+// KvPutRequest
 
-// int32 key = 1;
-inline void PutRequest::clear_key() {
+// .RPC.RpcHeader header = 1;
+inline bool KvPutRequest::has_header() const {
+  return this != internal_default_instance() && header_ != NULL;
+}
+inline void KvPutRequest::clear_header() {
+  if (GetArenaNoVirtual() == NULL && header_ != NULL) {
+    delete header_;
+  }
+  header_ = NULL;
+}
+inline const ::RPC::RpcHeader& KvPutRequest::_internal_header() const {
+  return *header_;
+}
+inline const ::RPC::RpcHeader& KvPutRequest::header() const {
+  const ::RPC::RpcHeader* p = header_;
+  // @@protoc_insertion_point(field_get:RPC.KvPutRequest.header)
+  return p != NULL ? *p : *reinterpret_cast<const ::RPC::RpcHeader*>(
+      &::RPC::_RpcHeader_default_instance_);
+}
+inline ::RPC::RpcHeader* KvPutRequest::release_header() {
+  // @@protoc_insertion_point(field_release:RPC.KvPutRequest.header)
+  
+  ::RPC::RpcHeader* temp = header_;
+  header_ = NULL;
+  return temp;
+}
+inline ::RPC::RpcHeader* KvPutRequest::mutable_header() {
+  
+  if (header_ == NULL) {
+    auto* p = CreateMaybeMessage<::RPC::RpcHeader>(GetArenaNoVirtual());
+    header_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:RPC.KvPutRequest.header)
+  return header_;
+}
+inline void KvPutRequest::set_allocated_header(::RPC::RpcHeader* header) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete header_;
+  }
+  if (header) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      header = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, header, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  header_ = header;
+  // @@protoc_insertion_point(field_set_allocated:RPC.KvPutRequest.header)
+}
+
+// int32 key = 2;
+inline void KvPutRequest::clear_key() {
   key_ = 0;
 }
-inline ::google::protobuf::int32 PutRequest::key() const {
-  // @@protoc_insertion_point(field_get:E477A1.PutRequest.key)
+inline ::google::protobuf::int32 KvPutRequest::key() const {
+  // @@protoc_insertion_point(field_get:RPC.KvPutRequest.key)
   return key_;
 }
-inline void PutRequest::set_key(::google::protobuf::int32 value) {
+inline void KvPutRequest::set_key(::google::protobuf::int32 value) {
   
   key_ = value;
-  // @@protoc_insertion_point(field_set:E477A1.PutRequest.key)
+  // @@protoc_insertion_point(field_set:RPC.KvPutRequest.key)
 }
 
-// bytes value = 2;
-inline void PutRequest::clear_value() {
+// bytes value = 3;
+inline void KvPutRequest::clear_value() {
   value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& PutRequest::value() const {
-  // @@protoc_insertion_point(field_get:E477A1.PutRequest.value)
+inline const ::std::string& KvPutRequest::value() const {
+  // @@protoc_insertion_point(field_get:RPC.KvPutRequest.value)
   return value_.GetNoArena();
 }
-inline void PutRequest::set_value(const ::std::string& value) {
+inline void KvPutRequest::set_value(const ::std::string& value) {
   
   value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:E477A1.PutRequest.value)
+  // @@protoc_insertion_point(field_set:RPC.KvPutRequest.value)
 }
 #if LANG_CXX11
-inline void PutRequest::set_value(::std::string&& value) {
+inline void KvPutRequest::set_value(::std::string&& value) {
   
   value_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:E477A1.PutRequest.value)
+  // @@protoc_insertion_point(field_set_rvalue:RPC.KvPutRequest.value)
 }
 #endif
-inline void PutRequest::set_value(const char* value) {
+inline void KvPutRequest::set_value(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:E477A1.PutRequest.value)
+  // @@protoc_insertion_point(field_set_char:RPC.KvPutRequest.value)
 }
-inline void PutRequest::set_value(const void* value, size_t size) {
+inline void KvPutRequest::set_value(const void* value, size_t size) {
   
   value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:E477A1.PutRequest.value)
+  // @@protoc_insertion_point(field_set_pointer:RPC.KvPutRequest.value)
 }
-inline ::std::string* PutRequest::mutable_value() {
+inline ::std::string* KvPutRequest::mutable_value() {
   
-  // @@protoc_insertion_point(field_mutable:E477A1.PutRequest.value)
+  // @@protoc_insertion_point(field_mutable:RPC.KvPutRequest.value)
   return value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* PutRequest::release_value() {
-  // @@protoc_insertion_point(field_release:E477A1.PutRequest.value)
+inline ::std::string* KvPutRequest::release_value() {
+  // @@protoc_insertion_point(field_release:RPC.KvPutRequest.value)
   
   return value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void PutRequest::set_allocated_value(::std::string* value) {
+inline void KvPutRequest::set_allocated_value(::std::string* value) {
   if (value != NULL) {
     
   } else {
     
   }
   value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set_allocated:E477A1.PutRequest.value)
+  // @@protoc_insertion_point(field_set_allocated:RPC.KvPutRequest.value)
 }
 
-// uint32 len = 3;
-inline void PutRequest::clear_len() {
-  len_ = 0u;
+// uint32 vlen = 4;
+inline void KvPutRequest::clear_vlen() {
+  vlen_ = 0u;
 }
-inline ::google::protobuf::uint32 PutRequest::len() const {
-  // @@protoc_insertion_point(field_get:E477A1.PutRequest.len)
-  return len_;
+inline ::google::protobuf::uint32 KvPutRequest::vlen() const {
+  // @@protoc_insertion_point(field_get:RPC.KvPutRequest.vlen)
+  return vlen_;
 }
-inline void PutRequest::set_len(::google::protobuf::uint32 value) {
+inline void KvPutRequest::set_vlen(::google::protobuf::uint32 value) {
   
-  len_ = value;
-  // @@protoc_insertion_point(field_set:E477A1.PutRequest.len)
+  vlen_ = value;
+  // @@protoc_insertion_point(field_set:RPC.KvPutRequest.vlen)
 }
 
 // -------------------------------------------------------------------
 
-// GetRequest
+// KvPutResponse
 
-// int32 key = 1;
-inline void GetRequest::clear_key() {
+// .RPC.RpcHeader header = 1;
+inline bool KvPutResponse::has_header() const {
+  return this != internal_default_instance() && header_ != NULL;
+}
+inline void KvPutResponse::clear_header() {
+  if (GetArenaNoVirtual() == NULL && header_ != NULL) {
+    delete header_;
+  }
+  header_ = NULL;
+}
+inline const ::RPC::RpcHeader& KvPutResponse::_internal_header() const {
+  return *header_;
+}
+inline const ::RPC::RpcHeader& KvPutResponse::header() const {
+  const ::RPC::RpcHeader* p = header_;
+  // @@protoc_insertion_point(field_get:RPC.KvPutResponse.header)
+  return p != NULL ? *p : *reinterpret_cast<const ::RPC::RpcHeader*>(
+      &::RPC::_RpcHeader_default_instance_);
+}
+inline ::RPC::RpcHeader* KvPutResponse::release_header() {
+  // @@protoc_insertion_point(field_release:RPC.KvPutResponse.header)
+  
+  ::RPC::RpcHeader* temp = header_;
+  header_ = NULL;
+  return temp;
+}
+inline ::RPC::RpcHeader* KvPutResponse::mutable_header() {
+  
+  if (header_ == NULL) {
+    auto* p = CreateMaybeMessage<::RPC::RpcHeader>(GetArenaNoVirtual());
+    header_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:RPC.KvPutResponse.header)
+  return header_;
+}
+inline void KvPutResponse::set_allocated_header(::RPC::RpcHeader* header) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete header_;
+  }
+  if (header) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      header = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, header, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  header_ = header;
+  // @@protoc_insertion_point(field_set_allocated:RPC.KvPutResponse.header)
+}
+
+// bool status = 2;
+inline void KvPutResponse::clear_status() {
+  status_ = false;
+}
+inline bool KvPutResponse::status() const {
+  // @@protoc_insertion_point(field_get:RPC.KvPutResponse.status)
+  return status_;
+}
+inline void KvPutResponse::set_status(bool value) {
+  
+  status_ = value;
+  // @@protoc_insertion_point(field_set:RPC.KvPutResponse.status)
+}
+
+// -------------------------------------------------------------------
+
+// KvGetRequest
+
+// .RPC.RpcHeader header = 1;
+inline bool KvGetRequest::has_header() const {
+  return this != internal_default_instance() && header_ != NULL;
+}
+inline void KvGetRequest::clear_header() {
+  if (GetArenaNoVirtual() == NULL && header_ != NULL) {
+    delete header_;
+  }
+  header_ = NULL;
+}
+inline const ::RPC::RpcHeader& KvGetRequest::_internal_header() const {
+  return *header_;
+}
+inline const ::RPC::RpcHeader& KvGetRequest::header() const {
+  const ::RPC::RpcHeader* p = header_;
+  // @@protoc_insertion_point(field_get:RPC.KvGetRequest.header)
+  return p != NULL ? *p : *reinterpret_cast<const ::RPC::RpcHeader*>(
+      &::RPC::_RpcHeader_default_instance_);
+}
+inline ::RPC::RpcHeader* KvGetRequest::release_header() {
+  // @@protoc_insertion_point(field_release:RPC.KvGetRequest.header)
+  
+  ::RPC::RpcHeader* temp = header_;
+  header_ = NULL;
+  return temp;
+}
+inline ::RPC::RpcHeader* KvGetRequest::mutable_header() {
+  
+  if (header_ == NULL) {
+    auto* p = CreateMaybeMessage<::RPC::RpcHeader>(GetArenaNoVirtual());
+    header_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:RPC.KvGetRequest.header)
+  return header_;
+}
+inline void KvGetRequest::set_allocated_header(::RPC::RpcHeader* header) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete header_;
+  }
+  if (header) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      header = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, header, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  header_ = header;
+  // @@protoc_insertion_point(field_set_allocated:RPC.KvGetRequest.header)
+}
+
+// int32 key = 2;
+inline void KvGetRequest::clear_key() {
   key_ = 0;
 }
-inline ::google::protobuf::int32 GetRequest::key() const {
-  // @@protoc_insertion_point(field_get:E477A1.GetRequest.key)
+inline ::google::protobuf::int32 KvGetRequest::key() const {
+  // @@protoc_insertion_point(field_get:RPC.KvGetRequest.key)
   return key_;
 }
-inline void GetRequest::set_key(::google::protobuf::int32 value) {
+inline void KvGetRequest::set_key(::google::protobuf::int32 value) {
   
   key_ = value;
-  // @@protoc_insertion_point(field_set:E477A1.GetRequest.key)
+  // @@protoc_insertion_point(field_set:RPC.KvGetRequest.key)
 }
 
 // -------------------------------------------------------------------
 
-// PutResponse
+// KvGetResponse
 
-// bool flag = 1;
-inline void PutResponse::clear_flag() {
-  flag_ = false;
+// .RPC.RpcHeader header = 1;
+inline bool KvGetResponse::has_header() const {
+  return this != internal_default_instance() && header_ != NULL;
 }
-inline bool PutResponse::flag() const {
-  // @@protoc_insertion_point(field_get:E477A1.PutResponse.flag)
-  return flag_;
+inline void KvGetResponse::clear_header() {
+  if (GetArenaNoVirtual() == NULL && header_ != NULL) {
+    delete header_;
+  }
+  header_ = NULL;
 }
-inline void PutResponse::set_flag(bool value) {
+inline const ::RPC::RpcHeader& KvGetResponse::_internal_header() const {
+  return *header_;
+}
+inline const ::RPC::RpcHeader& KvGetResponse::header() const {
+  const ::RPC::RpcHeader* p = header_;
+  // @@protoc_insertion_point(field_get:RPC.KvGetResponse.header)
+  return p != NULL ? *p : *reinterpret_cast<const ::RPC::RpcHeader*>(
+      &::RPC::_RpcHeader_default_instance_);
+}
+inline ::RPC::RpcHeader* KvGetResponse::release_header() {
+  // @@protoc_insertion_point(field_release:RPC.KvGetResponse.header)
   
-  flag_ = value;
-  // @@protoc_insertion_point(field_set:E477A1.PutResponse.flag)
+  ::RPC::RpcHeader* temp = header_;
+  header_ = NULL;
+  return temp;
 }
-
-// -------------------------------------------------------------------
-
-// GetResponse
-
-// bool flag = 1;
-inline void GetResponse::clear_flag() {
-  flag_ = false;
-}
-inline bool GetResponse::flag() const {
-  // @@protoc_insertion_point(field_get:E477A1.GetResponse.flag)
-  return flag_;
-}
-inline void GetResponse::set_flag(bool value) {
+inline ::RPC::RpcHeader* KvGetResponse::mutable_header() {
   
-  flag_ = value;
-  // @@protoc_insertion_point(field_set:E477A1.GetResponse.flag)
+  if (header_ == NULL) {
+    auto* p = CreateMaybeMessage<::RPC::RpcHeader>(GetArenaNoVirtual());
+    header_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:RPC.KvGetResponse.header)
+  return header_;
+}
+inline void KvGetResponse::set_allocated_header(::RPC::RpcHeader* header) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete header_;
+  }
+  if (header) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      header = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, header, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  header_ = header;
+  // @@protoc_insertion_point(field_set_allocated:RPC.KvGetResponse.header)
 }
 
-// bytes value = 2;
-inline void GetResponse::clear_value() {
+// bool status = 2;
+inline void KvGetResponse::clear_status() {
+  status_ = false;
+}
+inline bool KvGetResponse::status() const {
+  // @@protoc_insertion_point(field_get:RPC.KvGetResponse.status)
+  return status_;
+}
+inline void KvGetResponse::set_status(bool value) {
+  
+  status_ = value;
+  // @@protoc_insertion_point(field_set:RPC.KvGetResponse.status)
+}
+
+// bytes value = 3;
+inline void KvGetResponse::clear_value() {
   value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& GetResponse::value() const {
-  // @@protoc_insertion_point(field_get:E477A1.GetResponse.value)
+inline const ::std::string& KvGetResponse::value() const {
+  // @@protoc_insertion_point(field_get:RPC.KvGetResponse.value)
   return value_.GetNoArena();
 }
-inline void GetResponse::set_value(const ::std::string& value) {
+inline void KvGetResponse::set_value(const ::std::string& value) {
   
   value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:E477A1.GetResponse.value)
+  // @@protoc_insertion_point(field_set:RPC.KvGetResponse.value)
 }
 #if LANG_CXX11
-inline void GetResponse::set_value(::std::string&& value) {
+inline void KvGetResponse::set_value(::std::string&& value) {
   
   value_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:E477A1.GetResponse.value)
+  // @@protoc_insertion_point(field_set_rvalue:RPC.KvGetResponse.value)
 }
 #endif
-inline void GetResponse::set_value(const char* value) {
+inline void KvGetResponse::set_value(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:E477A1.GetResponse.value)
+  // @@protoc_insertion_point(field_set_char:RPC.KvGetResponse.value)
 }
-inline void GetResponse::set_value(const void* value, size_t size) {
+inline void KvGetResponse::set_value(const void* value, size_t size) {
   
   value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:E477A1.GetResponse.value)
+  // @@protoc_insertion_point(field_set_pointer:RPC.KvGetResponse.value)
 }
-inline ::std::string* GetResponse::mutable_value() {
+inline ::std::string* KvGetResponse::mutable_value() {
   
-  // @@protoc_insertion_point(field_mutable:E477A1.GetResponse.value)
+  // @@protoc_insertion_point(field_mutable:RPC.KvGetResponse.value)
   return value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* GetResponse::release_value() {
-  // @@protoc_insertion_point(field_release:E477A1.GetResponse.value)
+inline ::std::string* KvGetResponse::release_value() {
+  // @@protoc_insertion_point(field_release:RPC.KvGetResponse.value)
   
   return value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void GetResponse::set_allocated_value(::std::string* value) {
+inline void KvGetResponse::set_allocated_value(::std::string* value) {
   if (value != NULL) {
     
   } else {
     
   }
   value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set_allocated:E477A1.GetResponse.value)
+  // @@protoc_insertion_point(field_set_allocated:RPC.KvGetResponse.value)
 }
 
-// uint32 len = 3;
-inline void GetResponse::clear_len() {
-  len_ = 0u;
+// uint32 vlen = 4;
+inline void KvGetResponse::clear_vlen() {
+  vlen_ = 0u;
 }
-inline ::google::protobuf::uint32 GetResponse::len() const {
-  // @@protoc_insertion_point(field_get:E477A1.GetResponse.len)
-  return len_;
+inline ::google::protobuf::uint32 KvGetResponse::vlen() const {
+  // @@protoc_insertion_point(field_get:RPC.KvGetResponse.vlen)
+  return vlen_;
 }
-inline void GetResponse::set_len(::google::protobuf::uint32 value) {
+inline void KvGetResponse::set_vlen(::google::protobuf::uint32 value) {
   
-  len_ = value;
-  // @@protoc_insertion_point(field_set:E477A1.GetResponse.len)
+  vlen_ = value;
+  // @@protoc_insertion_point(field_set:RPC.KvGetResponse.vlen)
 }
 
 // -------------------------------------------------------------------
 
-// PutGetRequest
+// RpcMessage
 
-// .E477A1.RPCheader rpc_header = 1;
-inline bool PutGetRequest::has_rpc_header() const {
-  return this != internal_default_instance() && rpc_header_ != NULL;
+// .RPC.KvPutRequest kv_put_request = 1;
+inline bool RpcMessage::has_kv_put_request() const {
+  return message_type_case() == kKvPutRequest;
 }
-inline void PutGetRequest::clear_rpc_header() {
-  if (GetArenaNoVirtual() == NULL && rpc_header_ != NULL) {
-    delete rpc_header_;
-  }
-  rpc_header_ = NULL;
+inline void RpcMessage::set_has_kv_put_request() {
+  _oneof_case_[0] = kKvPutRequest;
 }
-inline const ::E477A1::RPCheader& PutGetRequest::_internal_rpc_header() const {
-  return *rpc_header_;
-}
-inline const ::E477A1::RPCheader& PutGetRequest::rpc_header() const {
-  const ::E477A1::RPCheader* p = rpc_header_;
-  // @@protoc_insertion_point(field_get:E477A1.PutGetRequest.rpc_header)
-  return p != NULL ? *p : *reinterpret_cast<const ::E477A1::RPCheader*>(
-      &::E477A1::_RPCheader_default_instance_);
-}
-inline ::E477A1::RPCheader* PutGetRequest::release_rpc_header() {
-  // @@protoc_insertion_point(field_release:E477A1.PutGetRequest.rpc_header)
-  
-  ::E477A1::RPCheader* temp = rpc_header_;
-  rpc_header_ = NULL;
-  return temp;
-}
-inline ::E477A1::RPCheader* PutGetRequest::mutable_rpc_header() {
-  
-  if (rpc_header_ == NULL) {
-    auto* p = CreateMaybeMessage<::E477A1::RPCheader>(GetArenaNoVirtual());
-    rpc_header_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:E477A1.PutGetRequest.rpc_header)
-  return rpc_header_;
-}
-inline void PutGetRequest::set_allocated_rpc_header(::E477A1::RPCheader* rpc_header) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete rpc_header_;
-  }
-  if (rpc_header) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      rpc_header = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, rpc_header, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  rpc_header_ = rpc_header;
-  // @@protoc_insertion_point(field_set_allocated:E477A1.PutGetRequest.rpc_header)
-}
-
-// .E477A1.PutRequest put_req = 2;
-inline bool PutGetRequest::has_put_req() const {
-  return request_variants_case() == kPutReq;
-}
-inline void PutGetRequest::set_has_put_req() {
-  _oneof_case_[0] = kPutReq;
-}
-inline void PutGetRequest::clear_put_req() {
-  if (has_put_req()) {
-    delete request_variants_.put_req_;
-    clear_has_request_variants();
+inline void RpcMessage::clear_kv_put_request() {
+  if (has_kv_put_request()) {
+    delete message_type_.kv_put_request_;
+    clear_has_message_type();
   }
 }
-inline const ::E477A1::PutRequest& PutGetRequest::_internal_put_req() const {
-  return *request_variants_.put_req_;
+inline const ::RPC::KvPutRequest& RpcMessage::_internal_kv_put_request() const {
+  return *message_type_.kv_put_request_;
 }
-inline ::E477A1::PutRequest* PutGetRequest::release_put_req() {
-  // @@protoc_insertion_point(field_release:E477A1.PutGetRequest.put_req)
-  if (has_put_req()) {
-    clear_has_request_variants();
-      ::E477A1::PutRequest* temp = request_variants_.put_req_;
-    request_variants_.put_req_ = NULL;
+inline ::RPC::KvPutRequest* RpcMessage::release_kv_put_request() {
+  // @@protoc_insertion_point(field_release:RPC.RpcMessage.kv_put_request)
+  if (has_kv_put_request()) {
+    clear_has_message_type();
+      ::RPC::KvPutRequest* temp = message_type_.kv_put_request_;
+    message_type_.kv_put_request_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline const ::E477A1::PutRequest& PutGetRequest::put_req() const {
-  // @@protoc_insertion_point(field_get:E477A1.PutGetRequest.put_req)
-  return has_put_req()
-      ? *request_variants_.put_req_
-      : *reinterpret_cast< ::E477A1::PutRequest*>(&::E477A1::_PutRequest_default_instance_);
+inline const ::RPC::KvPutRequest& RpcMessage::kv_put_request() const {
+  // @@protoc_insertion_point(field_get:RPC.RpcMessage.kv_put_request)
+  return has_kv_put_request()
+      ? *message_type_.kv_put_request_
+      : *reinterpret_cast< ::RPC::KvPutRequest*>(&::RPC::_KvPutRequest_default_instance_);
 }
-inline ::E477A1::PutRequest* PutGetRequest::mutable_put_req() {
-  if (!has_put_req()) {
-    clear_request_variants();
-    set_has_put_req();
-    request_variants_.put_req_ = CreateMaybeMessage< ::E477A1::PutRequest >(
+inline ::RPC::KvPutRequest* RpcMessage::mutable_kv_put_request() {
+  if (!has_kv_put_request()) {
+    clear_message_type();
+    set_has_kv_put_request();
+    message_type_.kv_put_request_ = CreateMaybeMessage< ::RPC::KvPutRequest >(
         GetArenaNoVirtual());
   }
-  // @@protoc_insertion_point(field_mutable:E477A1.PutGetRequest.put_req)
-  return request_variants_.put_req_;
+  // @@protoc_insertion_point(field_mutable:RPC.RpcMessage.kv_put_request)
+  return message_type_.kv_put_request_;
 }
 
-// .E477A1.GetRequest get_req = 3;
-inline bool PutGetRequest::has_get_req() const {
-  return request_variants_case() == kGetReq;
+// .RPC.KvPutResponse kv_put_response = 2;
+inline bool RpcMessage::has_kv_put_response() const {
+  return message_type_case() == kKvPutResponse;
 }
-inline void PutGetRequest::set_has_get_req() {
-  _oneof_case_[0] = kGetReq;
+inline void RpcMessage::set_has_kv_put_response() {
+  _oneof_case_[0] = kKvPutResponse;
 }
-inline void PutGetRequest::clear_get_req() {
-  if (has_get_req()) {
-    delete request_variants_.get_req_;
-    clear_has_request_variants();
+inline void RpcMessage::clear_kv_put_response() {
+  if (has_kv_put_response()) {
+    delete message_type_.kv_put_response_;
+    clear_has_message_type();
   }
 }
-inline const ::E477A1::GetRequest& PutGetRequest::_internal_get_req() const {
-  return *request_variants_.get_req_;
+inline const ::RPC::KvPutResponse& RpcMessage::_internal_kv_put_response() const {
+  return *message_type_.kv_put_response_;
 }
-inline ::E477A1::GetRequest* PutGetRequest::release_get_req() {
-  // @@protoc_insertion_point(field_release:E477A1.PutGetRequest.get_req)
-  if (has_get_req()) {
-    clear_has_request_variants();
-      ::E477A1::GetRequest* temp = request_variants_.get_req_;
-    request_variants_.get_req_ = NULL;
+inline ::RPC::KvPutResponse* RpcMessage::release_kv_put_response() {
+  // @@protoc_insertion_point(field_release:RPC.RpcMessage.kv_put_response)
+  if (has_kv_put_response()) {
+    clear_has_message_type();
+      ::RPC::KvPutResponse* temp = message_type_.kv_put_response_;
+    message_type_.kv_put_response_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline const ::E477A1::GetRequest& PutGetRequest::get_req() const {
-  // @@protoc_insertion_point(field_get:E477A1.PutGetRequest.get_req)
-  return has_get_req()
-      ? *request_variants_.get_req_
-      : *reinterpret_cast< ::E477A1::GetRequest*>(&::E477A1::_GetRequest_default_instance_);
+inline const ::RPC::KvPutResponse& RpcMessage::kv_put_response() const {
+  // @@protoc_insertion_point(field_get:RPC.RpcMessage.kv_put_response)
+  return has_kv_put_response()
+      ? *message_type_.kv_put_response_
+      : *reinterpret_cast< ::RPC::KvPutResponse*>(&::RPC::_KvPutResponse_default_instance_);
 }
-inline ::E477A1::GetRequest* PutGetRequest::mutable_get_req() {
-  if (!has_get_req()) {
-    clear_request_variants();
-    set_has_get_req();
-    request_variants_.get_req_ = CreateMaybeMessage< ::E477A1::GetRequest >(
+inline ::RPC::KvPutResponse* RpcMessage::mutable_kv_put_response() {
+  if (!has_kv_put_response()) {
+    clear_message_type();
+    set_has_kv_put_response();
+    message_type_.kv_put_response_ = CreateMaybeMessage< ::RPC::KvPutResponse >(
         GetArenaNoVirtual());
   }
-  // @@protoc_insertion_point(field_mutable:E477A1.PutGetRequest.get_req)
-  return request_variants_.get_req_;
+  // @@protoc_insertion_point(field_mutable:RPC.RpcMessage.kv_put_response)
+  return message_type_.kv_put_response_;
 }
 
-inline bool PutGetRequest::has_request_variants() const {
-  return request_variants_case() != REQUEST_VARIANTS_NOT_SET;
+// .RPC.KvGetRequest kv_get_request = 3;
+inline bool RpcMessage::has_kv_get_request() const {
+  return message_type_case() == kKvGetRequest;
 }
-inline void PutGetRequest::clear_has_request_variants() {
-  _oneof_case_[0] = REQUEST_VARIANTS_NOT_SET;
+inline void RpcMessage::set_has_kv_get_request() {
+  _oneof_case_[0] = kKvGetRequest;
 }
-inline PutGetRequest::RequestVariantsCase PutGetRequest::request_variants_case() const {
-  return PutGetRequest::RequestVariantsCase(_oneof_case_[0]);
-}
-// -------------------------------------------------------------------
-
-// PutGetResponse
-
-// .E477A1.RPCheader rpc_header = 1;
-inline bool PutGetResponse::has_rpc_header() const {
-  return this != internal_default_instance() && rpc_header_ != NULL;
-}
-inline void PutGetResponse::clear_rpc_header() {
-  if (GetArenaNoVirtual() == NULL && rpc_header_ != NULL) {
-    delete rpc_header_;
-  }
-  rpc_header_ = NULL;
-}
-inline const ::E477A1::RPCheader& PutGetResponse::_internal_rpc_header() const {
-  return *rpc_header_;
-}
-inline const ::E477A1::RPCheader& PutGetResponse::rpc_header() const {
-  const ::E477A1::RPCheader* p = rpc_header_;
-  // @@protoc_insertion_point(field_get:E477A1.PutGetResponse.rpc_header)
-  return p != NULL ? *p : *reinterpret_cast<const ::E477A1::RPCheader*>(
-      &::E477A1::_RPCheader_default_instance_);
-}
-inline ::E477A1::RPCheader* PutGetResponse::release_rpc_header() {
-  // @@protoc_insertion_point(field_release:E477A1.PutGetResponse.rpc_header)
-  
-  ::E477A1::RPCheader* temp = rpc_header_;
-  rpc_header_ = NULL;
-  return temp;
-}
-inline ::E477A1::RPCheader* PutGetResponse::mutable_rpc_header() {
-  
-  if (rpc_header_ == NULL) {
-    auto* p = CreateMaybeMessage<::E477A1::RPCheader>(GetArenaNoVirtual());
-    rpc_header_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:E477A1.PutGetResponse.rpc_header)
-  return rpc_header_;
-}
-inline void PutGetResponse::set_allocated_rpc_header(::E477A1::RPCheader* rpc_header) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete rpc_header_;
-  }
-  if (rpc_header) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      rpc_header = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, rpc_header, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  rpc_header_ = rpc_header;
-  // @@protoc_insertion_point(field_set_allocated:E477A1.PutGetResponse.rpc_header)
-}
-
-// .E477A1.PutResponse put_res = 2;
-inline bool PutGetResponse::has_put_res() const {
-  return response_variants_case() == kPutRes;
-}
-inline void PutGetResponse::set_has_put_res() {
-  _oneof_case_[0] = kPutRes;
-}
-inline void PutGetResponse::clear_put_res() {
-  if (has_put_res()) {
-    delete response_variants_.put_res_;
-    clear_has_response_variants();
+inline void RpcMessage::clear_kv_get_request() {
+  if (has_kv_get_request()) {
+    delete message_type_.kv_get_request_;
+    clear_has_message_type();
   }
 }
-inline const ::E477A1::PutResponse& PutGetResponse::_internal_put_res() const {
-  return *response_variants_.put_res_;
+inline const ::RPC::KvGetRequest& RpcMessage::_internal_kv_get_request() const {
+  return *message_type_.kv_get_request_;
 }
-inline ::E477A1::PutResponse* PutGetResponse::release_put_res() {
-  // @@protoc_insertion_point(field_release:E477A1.PutGetResponse.put_res)
-  if (has_put_res()) {
-    clear_has_response_variants();
-      ::E477A1::PutResponse* temp = response_variants_.put_res_;
-    response_variants_.put_res_ = NULL;
+inline ::RPC::KvGetRequest* RpcMessage::release_kv_get_request() {
+  // @@protoc_insertion_point(field_release:RPC.RpcMessage.kv_get_request)
+  if (has_kv_get_request()) {
+    clear_has_message_type();
+      ::RPC::KvGetRequest* temp = message_type_.kv_get_request_;
+    message_type_.kv_get_request_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline const ::E477A1::PutResponse& PutGetResponse::put_res() const {
-  // @@protoc_insertion_point(field_get:E477A1.PutGetResponse.put_res)
-  return has_put_res()
-      ? *response_variants_.put_res_
-      : *reinterpret_cast< ::E477A1::PutResponse*>(&::E477A1::_PutResponse_default_instance_);
+inline const ::RPC::KvGetRequest& RpcMessage::kv_get_request() const {
+  // @@protoc_insertion_point(field_get:RPC.RpcMessage.kv_get_request)
+  return has_kv_get_request()
+      ? *message_type_.kv_get_request_
+      : *reinterpret_cast< ::RPC::KvGetRequest*>(&::RPC::_KvGetRequest_default_instance_);
 }
-inline ::E477A1::PutResponse* PutGetResponse::mutable_put_res() {
-  if (!has_put_res()) {
-    clear_response_variants();
-    set_has_put_res();
-    response_variants_.put_res_ = CreateMaybeMessage< ::E477A1::PutResponse >(
+inline ::RPC::KvGetRequest* RpcMessage::mutable_kv_get_request() {
+  if (!has_kv_get_request()) {
+    clear_message_type();
+    set_has_kv_get_request();
+    message_type_.kv_get_request_ = CreateMaybeMessage< ::RPC::KvGetRequest >(
         GetArenaNoVirtual());
   }
-  // @@protoc_insertion_point(field_mutable:E477A1.PutGetResponse.put_res)
-  return response_variants_.put_res_;
+  // @@protoc_insertion_point(field_mutable:RPC.RpcMessage.kv_get_request)
+  return message_type_.kv_get_request_;
 }
 
-// .E477A1.GetResponse get_res = 3;
-inline bool PutGetResponse::has_get_res() const {
-  return response_variants_case() == kGetRes;
+// .RPC.KvGetResponse kv_get_response = 4;
+inline bool RpcMessage::has_kv_get_response() const {
+  return message_type_case() == kKvGetResponse;
 }
-inline void PutGetResponse::set_has_get_res() {
-  _oneof_case_[0] = kGetRes;
+inline void RpcMessage::set_has_kv_get_response() {
+  _oneof_case_[0] = kKvGetResponse;
 }
-inline void PutGetResponse::clear_get_res() {
-  if (has_get_res()) {
-    delete response_variants_.get_res_;
-    clear_has_response_variants();
+inline void RpcMessage::clear_kv_get_response() {
+  if (has_kv_get_response()) {
+    delete message_type_.kv_get_response_;
+    clear_has_message_type();
   }
 }
-inline const ::E477A1::GetResponse& PutGetResponse::_internal_get_res() const {
-  return *response_variants_.get_res_;
+inline const ::RPC::KvGetResponse& RpcMessage::_internal_kv_get_response() const {
+  return *message_type_.kv_get_response_;
 }
-inline ::E477A1::GetResponse* PutGetResponse::release_get_res() {
-  // @@protoc_insertion_point(field_release:E477A1.PutGetResponse.get_res)
-  if (has_get_res()) {
-    clear_has_response_variants();
-      ::E477A1::GetResponse* temp = response_variants_.get_res_;
-    response_variants_.get_res_ = NULL;
+inline ::RPC::KvGetResponse* RpcMessage::release_kv_get_response() {
+  // @@protoc_insertion_point(field_release:RPC.RpcMessage.kv_get_response)
+  if (has_kv_get_response()) {
+    clear_has_message_type();
+      ::RPC::KvGetResponse* temp = message_type_.kv_get_response_;
+    message_type_.kv_get_response_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline const ::E477A1::GetResponse& PutGetResponse::get_res() const {
-  // @@protoc_insertion_point(field_get:E477A1.PutGetResponse.get_res)
-  return has_get_res()
-      ? *response_variants_.get_res_
-      : *reinterpret_cast< ::E477A1::GetResponse*>(&::E477A1::_GetResponse_default_instance_);
+inline const ::RPC::KvGetResponse& RpcMessage::kv_get_response() const {
+  // @@protoc_insertion_point(field_get:RPC.RpcMessage.kv_get_response)
+  return has_kv_get_response()
+      ? *message_type_.kv_get_response_
+      : *reinterpret_cast< ::RPC::KvGetResponse*>(&::RPC::_KvGetResponse_default_instance_);
 }
-inline ::E477A1::GetResponse* PutGetResponse::mutable_get_res() {
-  if (!has_get_res()) {
-    clear_response_variants();
-    set_has_get_res();
-    response_variants_.get_res_ = CreateMaybeMessage< ::E477A1::GetResponse >(
+inline ::RPC::KvGetResponse* RpcMessage::mutable_kv_get_response() {
+  if (!has_kv_get_response()) {
+    clear_message_type();
+    set_has_kv_get_response();
+    message_type_.kv_get_response_ = CreateMaybeMessage< ::RPC::KvGetResponse >(
         GetArenaNoVirtual());
   }
-  // @@protoc_insertion_point(field_mutable:E477A1.PutGetResponse.get_res)
-  return response_variants_.get_res_;
+  // @@protoc_insertion_point(field_mutable:RPC.RpcMessage.kv_get_response)
+  return message_type_.kv_get_response_;
 }
 
-inline bool PutGetResponse::has_response_variants() const {
-  return response_variants_case() != RESPONSE_VARIANTS_NOT_SET;
+inline bool RpcMessage::has_message_type() const {
+  return message_type_case() != MESSAGE_TYPE_NOT_SET;
 }
-inline void PutGetResponse::clear_has_response_variants() {
-  _oneof_case_[0] = RESPONSE_VARIANTS_NOT_SET;
+inline void RpcMessage::clear_has_message_type() {
+  _oneof_case_[0] = MESSAGE_TYPE_NOT_SET;
 }
-inline PutGetResponse::ResponseVariantsCase PutGetResponse::response_variants_case() const {
-  return PutGetResponse::ResponseVariantsCase(_oneof_case_[0]);
+inline RpcMessage::MessageTypeCase RpcMessage::message_type_case() const {
+  return RpcMessage::MessageTypeCase(_oneof_case_[0]);
 }
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
@@ -1542,12 +1549,10 @@ inline PutGetResponse::ResponseVariantsCase PutGetResponse::response_variants_ca
 
 // -------------------------------------------------------------------
 
-// -------------------------------------------------------------------
-
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace E477A1
+}  // namespace RPC
 
 // @@protoc_insertion_point(global_scope)
 

@@ -1,0 +1,61 @@
+Main: ************************************
+Main: starting Server1
+Server1: adding KV service
+in add Service:
+in Node start 
+number of services is 1
+Service: Server1.kv_service
+Main: ************************************
+Main: starting Server2
+Server2: adding KV service
+in add Service:
+in Node start 
+number of services is 1
+Service: Server2.kv_service
+Main: ************************************
+Main: initialize Client1
+Main: Client1 address: 10.0.0.3
+ClientStub: server address is set to 10.0.0.2
+Main: initialize Client2
+Main: Client2 address: 10.0.0.5
+ClientStub: server address is set to 10.0.0.4
+Main: ************************************
+Main: starting multiple clients
+Main: ************************************
+Main: waiting for clients to finish
+Main: ************************************
+Main: Client1
+Client1: A grey tuskless elephant
+Client1: Content of the byte array to be stored in the database:65 32 103 114 101 121 32 116 117 115 107 108 101 115 115 32 101 108 101 112 104 97 110 116 
+Client1: -------------- Key Value Put Operation --------------
+ClientStub: client sent 48 bytes
+KVService: server received 48 bytes from address 10.0.0.3
+KVService: server sent 20 bytes
+Client1: Successfully put key-value pair.
+Client1: -------------- Key Value Get Operation --------------
+ClientStub: client sent = 20 bytes
+KVService: server received 20 bytes from address 10.0.0.3
+KVService: server sent 48 bytes
+Client1: Successfully retrieved value for key 88: A grey tuskless elephant
+Client1: Content of the byte array retrieved from database:65 32 103 114 101 121 32 116 117 115 107 108 101 115 115 32 101 108 101 112 104 97 110 116 
+Main: ************************************
+Main: Client2
+Client2: A gaint pink elephant with magnificent tusks
+Client2: Content of the byte array to be stored in the database:65 32 103 97 105 110 116 32 112 105 110 107 32 101 108 101 112 104 97 110 116 32 119 105 116 104 32 109 97 103 110 105 102 105 99 101 110 116 32 116 117 115 107 115 
+Client2: -------------- Key Value Put Operation --------------
+ClientStub: client sent 68 bytes
+KVService: server received 68 bytes from address 10.0.0.3
+KVService: server sent 20 bytes
+Client2: Successfully put key-value pair.
+Client2: -------------- Key Value Get Operation --------------
+ClientStub: client sent = 20 bytes
+KVService: server received 20 bytes from address 10.0.0.3
+KVService: server sent 68 bytes
+Client2: Successfully retrieved value for key 44: A gaint pink elephant with magnificent tusks
+Client2: Content of the byte array retrieved from database:65 32 103 97 105 110 116 32 112 105 110 107 32 101 108 101 112 104 97 110 116 32 119 105 116 104 32 109 97 103 110 105 102 105 99 101 110 116 32 116 117 115 107 115 
+Main: ************************************
+Main: calling stop services on servers
+Main: ************************************
+Main: waiting for threads to complete
+Main: ************************************
+Main: Shuting down the protobuf library
